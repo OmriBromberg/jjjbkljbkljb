@@ -34,6 +34,8 @@ See https://github.com/OmriBromberg/elasticsearch-datemath for details about the
         }
     }
 ##### `start_time`
+- Value type is string
+- default value is `"now"`
 The default codec is json 
 [create an anchor](#Dependencies)
 
