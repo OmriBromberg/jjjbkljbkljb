@@ -15,12 +15,12 @@ See https://github.com/OmriBromberg/elasticsearch-datemath for details about the
 | Setting       | Input Type    | Required | Default |
 | ------------- | ------------- | -------- | ------- |
 | [`start_time`](#start_time)    | string, datemath expression        | No       |  now-1d |
-| end_time      | string, datemath expression |   No    |  now    [This is the link text](#headin)|
-| datetime_format | string, valid java 8 time format     |    No   | yyyy.MM.dd|
-| index_format   | string, valid java 8 time format        | No       |  yyyy.Mm.dd |
-| retries      | number, n >= 0      |   No    |  0    |
-| threads | number, n > 0     |    No   | 1|
-| schedule    | hash, valid rufus-scheduler type `{in|at|every|cron => x}`       | Yes       |   |
+| [`end_time`](#end_time)      | string, datemath expression |   No    |  now    [This is the link text](#headin)|
+| [`datetime_format`](#datetime_format)| string, valid java 8 time format     |    No   | yyyy.MM.dd|
+| [`index_format`](#index_format)   | string, valid java 8 time format        | No       |  yyyy.Mm.dd |
+| [`retries`](#retries)      | number, n >= 0      |   No    |  0    |
+| [`threads`](#threads) | number, n > 0     |    No   | 1|
+| [`schedule`](#schedule)    | hash, valid rufus-scheduler type `{in|at|every|cron => x}`       | Yes       |   |
 
 
     input {
@@ -35,7 +35,45 @@ See https://github.com/OmriBromberg/elasticsearch-datemath for details about the
     }
 ##### `start_time`
 - Value type is string
+- default value is `"now-1d"`
+
+The datemath expression used to determine the start datetime of the formatted indices
+
+##### `end_time`
+- Value type is string
 - default value is `"now"`
+
+The datemath expression used to determine the end datetime of the formatted indices
+
+##### `datetime_format`
+- Value type is string
+- default value is `"yyyy.MM.dd"`
+
+The datetime format used for the start and end datemath expressions
+
+##### `index_format`
+- Value type is string
+- default value is `"yyyy.MM.dd"`
+
+The datetime format for the formatted indices
+
+##### `retries`
+- Value type is number
+- default value is `0`
+
+The number of retries used if the query fails
+
+##### `threads`
+- Value type is number
+- default value is `1`
+
+The number of simultaneous threads used to query
+
+##### `schedule`
+- Value type is hash
+- There is no default value for this setting.
+
+The setting used to configure the scheduler type. valid rufus-scheduler type `{in|at|every|cron => x}`
 
 The default codec is json 
 [create an anchor](#Dependencies)
