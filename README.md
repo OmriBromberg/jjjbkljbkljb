@@ -14,7 +14,7 @@ See https://github.com/OmriBromberg/elasticsearch-datemath for details about the
 
 | Setting       | Input Type    | Required | Default |
 | ------------- | ------------- | -------- | ------- |
-| `[start_time](#start_time)`    | string, datemath expression        | No       |  now-1d |
+| [`start_time`](#start_time)    | string, datemath expression        | No       |  now-1d |
 | end_time      | string, datemath expression |   No    |  now    [This is the link text](#headin)|
 | datetime_format | string, valid java 8 time format     |    No   | yyyy.MM.dd|
 | index_format   | string, valid java 8 time format        | No       |  yyyy.Mm.dd |
