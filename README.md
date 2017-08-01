@@ -73,9 +73,7 @@ The number of simultaneous threads used to query
 - Value type is hash
 - There is no default value for this setting.
 
-The setting used to configure the scheduler type. valid rufus-scheduler type `{in|at|every|cron => '10m'|'2030/12/12 23:30:00'|'10s'|'5 0 * * *'}`
-
-See [rufus-scheduler](https://github.com/jmettraux/rufus-scheduler) for a more detailed view
+The setting used to configure the scheduler type. valid rufus-scheduler type `{in|at|every|cron => '10m'|'2030/12/12 23:30:00'|'10s'|'5 0 * * *'}`. See [rufus-scheduler](https://github.com/jmettraux/rufus-scheduler) for a more detailed view
 
 The default codec is json 
 [create an anchor](#Dependencies)
